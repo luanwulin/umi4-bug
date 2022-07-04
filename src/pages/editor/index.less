@@ -1,0 +1,64 @@
+@border: 1px solid #d9d9d9;
+
+.editor-container {
+  //border: 1px solid @borderColor;
+  height: 100vh;
+  box-sizing: border-box;
+  width: 100vw;
+  margin: 0;
+  overflow: hidden;
+
+  &.qiankun-app {
+    width: 100%;
+    height: 100%;
+  }
+
+  .tea-col {
+    padding: 0;
+    height: 100%;
+    //overflow: scroll;
+  }
+
+  .editor-part-common {
+    padding: 10px;
+  }
+
+  .editor-main {
+    border-left: @border;
+    border-right: @border;
+    height: 100%;
+    position: relative;
+
+    &.no-left-border {
+      border-left: 0;
+    }
+
+    &.no-right-border {
+      border-right: 0;
+    }
+  }
+
+  .editor-left {
+    .editor-part-common;
+  }
+
+  .editor-right {
+    .tea-accordion__header-title {
+      font-size: 12px;
+    }
+
+    .tea-accordion__body {
+      font-size: 14px;
+      padding: 15px;
+
+      .tea-form__item {
+        width: 100%;
+        display: block;
+      }
+
+      .tea-form__controls{
+        padding-bottom: 16px;
+      }
+    }
+  }
+}

@@ -1,0 +1,49 @@
+@arrowBorderRadius: 16px;
+@border: 1px solid #d9d9d9;
+
+.editor-main {
+  position: relative;
+  .editor-main-arrow {
+    position: absolute;
+    top: 50%;
+    display: inline-block;
+    width: 16px;
+    height: 60px;
+    line-height: 60px;
+    vertical-align: middle;
+    background: #dedede;
+    cursor: pointer;
+    &:hover {
+      font-weight: bold;
+    }
+    transform: translate(0, -50%);
+    z-index: 10;
+  }
+  .editor-main-left {
+    .editor-main-arrow;
+    left: 0;
+    border-radius: 0 @arrowBorderRadius @arrowBorderRadius 0;
+  }
+  .editor-main-right {
+    .editor-main-arrow;
+    right: 0;
+    border-radius: @arrowBorderRadius 0 0 @arrowBorderRadius;
+  }
+  .editor-main-top {
+    padding: 10px;
+    border-bottom: @border;
+    //line-height: 40px;
+    text-align: right;
+    box-shadow: 0 0.1em 0.5em 0 rgba(0, 0, 0, 0.15);
+  }
+  .editor-main-form {
+    //width: calc(100% - 30px);
+    height: calc(100vh - 100px);
+    margin: 0 auto;
+    overflow-y: auto;
+    padding: 30px 40px;
+  }
+  .tea-btn {
+    margin-left: 10px;
+  }
+}

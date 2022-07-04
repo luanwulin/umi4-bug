@@ -1,0 +1,64 @@
+{
+  "private": true,
+  "scripts": {
+    "start": "max dev",
+    "dev-build": "cross-env NODE_ENV=development max build",
+    "prod-build": "cross-env NODE_ENV=production max build",
+    "postinstall": "max setup",
+    "prettier": "prettier --config --write '**/*.{js,jsx,tsx,ts,less,md,json}'",
+    "test": "umi-test",
+    "test:coverage": "umi-test --coverage"
+  },
+  "gitHooks": {
+    "pre-commit": "lint-staged"
+  },
+  "lint-staged": {
+    "*.{js,jsx,less,md,json}": [
+      "git add"
+    ],
+    "*.ts?(x)": [
+      "git add"
+    ]
+  },
+  "dependencies": {
+    "@ant-design/pro-layout": "^6.5.0",
+    "@babel/runtime-corejs3": "^7.18.3",
+    "@umijs/max": "^4.0.0",
+    "@wangeditor/editor": "^5.1.0",
+    "@wangeditor/editor-for-react": "^1.0.3",
+    "ahooks": "^3.1.10",
+    "amis": "^1.10.0",
+    "axios": "^0.24.0",
+    "caniuse-lite": "^1.0.30001314",
+    "classnames": "^2.3.1",
+    "cross-env": "^7.0.3",
+    "eslint-plugin-import": "^2.25.3",
+    "file-loader": "^6.2.0",
+    "lodash-es": "^4.17.21",
+    "qs": "^6.10.3",
+    "react": "17.x",
+    "react-dom": "17.x",
+    "react-sortablejs": "^6.0.0",
+    "url-loader": "^4.1.1",
+    "uuid": "^8.3.2"
+  },
+  "devDependencies": {
+    "@babel/plugin-proposal-nullish-coalescing-operator": "^7.16.5",
+    "@babel/plugin-proposal-optional-chaining": "^7.16.5",
+    "@rainbowfish/umi-plugin-chunks": "^1.0.5",
+    "@types/lodash-es": "^4.17.6",
+    "@types/react": "^17.0.0",
+    "@types/react-dom": "^17.0.0",
+    "@types/uuid": "^8.3.4",
+    "@typescript-eslint/eslint-plugin": "^5.4.0",
+    "@umijs/test": "^3.5.20",
+    "eslint": "^8.6.0",
+    "lint-staged": "^10.0.7",
+    "monaco-editor": "0.32.0",
+    "monaco-editor-webpack-plugin": "7.0.1",
+    "prettier": "^2.2.0",
+    "react-monaco-editor": "0.46.0",
+    "typescript": "^4.1.2",
+    "yorkie": "^2.0.0"
+  }
+}
